@@ -1,16 +1,11 @@
-<p align="center">
-    <a href="https://checklistfacil.com/" target="_blank">
-        <img src="https://assets-global.website-files.com/62fe3a3354fbe1be7b08f4d2/63039e9a7539518f92d297f5_OG_Spassu2.png" height="300">
-    </a>
-</p>
 
+# BOOK API - Laravel + DOCKER
 
 ## Sobre o Projeto
 
 Criar um projeto utilizando as boas práticas de mercado e apresentar o mesmo demonstrando o passo a passo de sua criação (base de dados, tecnologias, aplicação, metodologias, frameworks, etc).
 O projeto consiste em um cadastro de livros.
 
-### Desafio
 - Deve ser feito CRUD para Livro, Autor e Assunto conforme o modelo de dados.
 - Deve ser feito obrigatoriamente um relatório (utilizando o componente de relatórios de sua preferência(Crystal, ReportViewer, etc)) e a consulta desse relatório deve ser proveniente de uma view criada no banco de dados. Este relatório pode ser simples, mas permita o entendimento dos dados. O relatório deve trazer as informações das 3 tabelas principais agrupando os dados por autor (atenção pois um livro pode ter mais de autor).
 - TDD (Test Driven Development) será considerados um diferencial.
