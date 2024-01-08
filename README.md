@@ -82,6 +82,12 @@ http://localhost:80
 Spassu - Books.postman_collection.json
 ````
 
+### OPENAI
+**No arquivo env.example ou env, para IA funcionar deve se colocar a chave da key da OPENAI CHATGPT*
+```bash
+OPENAI_API_KEY=sk-xxxxxawebyekrcCxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+````
+
 ### Emails
 **Por se tratar de um teste o sistema ira disparar os emails que serao recebidos usando mailpit que ja vem configurado por padrão no projeto do laravel utilizando o Sail, basta acessar a url
 [`http://localhost:8025`](http://localhost:8025)
