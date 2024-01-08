@@ -41,6 +41,15 @@ class LivroRepository implements LivroRepositoryInterface
     {
         $livro = Livro::findOrFail($id);
         $livro->update($data);
+
+        if (isset($data['autores'])) {
+            $livro->autores()->sync($data['autores']);
+        }
+
+        if (isset($data['assuntos'])) {
+            $livro->assuntos()->sync($data['assuntos']);
+        }
+
         return $livro;
     }
 

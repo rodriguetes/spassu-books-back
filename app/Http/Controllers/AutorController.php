@@ -100,7 +100,17 @@ class AutorController extends Controller
      */
     public function destroy(int $id)
     {
-        $this->autorService->destroyAutor($id);
+        $autorDeletado = $this->autorService->destroyAutor($id);
+
+        if (!$autorDeletado) {
+            return $this->jsonResponse(
+                false,
+                null,
+                'Existem livros atribuídos a essse Autor.',
+                ResponseAlias::HTTP_BAD_REQUEST
+            );
+        }
+
         return $this->jsonResponse(
             true,
             null,

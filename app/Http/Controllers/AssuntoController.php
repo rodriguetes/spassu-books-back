@@ -100,7 +100,17 @@ class AssuntoController extends Controller
      */
     public function destroy(int $id)
     {
-        $this->assuntoService->destroyAssunto($id);
+        $assuntoDeletado = $this->assuntoService->destroyAssunto($id);
+
+        if (!$assuntoDeletado) {
+            return $this->jsonResponse(
+                false,
+                null,
+                'Existem livros atribuídos a essse Assunto.',
+                ResponseAlias::HTTP_BAD_REQUEST
+            );
+        }
+
         return $this->jsonResponse(
             true,
             null,

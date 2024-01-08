@@ -39,7 +39,11 @@ class AssuntoRepository implements AssuntoRepositoryInterface
 
     public function destroyAssunto($id)
     {
-        $assunto = Assunto::findOrFail($id);
+        $assunto = Assunto::with('livros')->findOrFail($id);
+        if ($assunto->livros->isNotEmpty()) {
+            return false;
+        }
+
         $assunto->delete();
         return $assunto;
     }

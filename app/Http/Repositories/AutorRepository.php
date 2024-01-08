@@ -39,7 +39,11 @@ class AutorRepository implements AutorRepositoryInterface
 
     public function destroyAutor($id)
     {
-        $autor = Autor::findOrFail($id);
+        $autor = Autor::with('livros')->findOrFail($id);
+        if ($autor->livros->isNotEmpty()) {
+            return false;
+        }
+
         $autor->delete();
         return $autor;
     }
