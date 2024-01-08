@@ -5,6 +5,7 @@ use App\Http\Controllers\AutorController;
 use App\Http\Controllers\AssuntoController;
 use App\Http\Controllers\LivroController;
 use App\Http\Controllers\ViewController;
+use App\Http\Controllers\ChatGPTController;
 
 
 
@@ -28,3 +29,4 @@ Route::apiResource('autor', AutorController::class);
 Route::apiResource('assunto', AssuntoController::class);
 
 Route::get('gerarRelatorio', [ViewController::class, 'gerarRelatorio']);
+Route::post('sugestaoLivro', [ChatGPTController::class, 'sugestaoLivro']);

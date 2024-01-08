@@ -1,5 +1,5 @@
 
-# BOOK API - Laravel + DOCKER
+# BOOK API - Laravel + DOCKER + CHATGPT
 
 ## Sobre o Projeto
 
@@ -14,6 +14,7 @@ O projeto consiste em um cadastro de livros.
 
 - Laravel Sail
 - Docker
+- API OPENAI CHATGPT
 - Clean Architecture
 - Laravel V.10.2.0
 - Composer version 2.5.4
